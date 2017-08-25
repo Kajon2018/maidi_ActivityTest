@@ -1,5 +1,6 @@
 package com.maidi.activitytest;
 
+import android.content.Context;
 import android.content.Intent;
 import android.icu.text.LocaleDisplayNames;
 import android.support.v7.app.AppCompatActivity;
@@ -26,7 +27,7 @@ public class SecondActivity extends BaseActivity {
         });
         Intent intent = getIntent();
         String data = intent.getStringExtra("extra_data");
-        Log.d("SecondActivity",data);
+       // Log.d("SecondActivity",data);
     }
 
     @Override
@@ -37,4 +38,12 @@ public class SecondActivity extends BaseActivity {
         setResult(RESULT_OK,intent);
         finish();
     }
+
+    public static void actionStart(Context context, String data1,String data2){
+        Intent intent = new Intent(context ,SecondActivity.class);
+        intent.putExtra("param1",data1);
+        intent.putExtra("param2",data2);
+        context.startActivity(intent);
+    }
+
 }

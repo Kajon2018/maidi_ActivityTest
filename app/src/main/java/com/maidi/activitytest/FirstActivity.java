@@ -29,6 +29,7 @@ public class FirstActivity extends BaseActivity {
              //   intent.addCategory("com.maidi.activitytest.MYCATEGORY");
                 intent.putExtra("extra_data",data);
                 startActivityForResult(intent,1);
+                SecondActivity.actionStart(FirstActivity.this,"data1","data2");
 
             //    Intent intent1 = new Intent(FirstActivity.this,FirstActivity.class);
             //    startActivity(intent1);
