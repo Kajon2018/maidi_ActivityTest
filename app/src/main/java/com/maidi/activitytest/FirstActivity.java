@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class FirstActivity extends AppCompatActivity {
+public class FirstActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +30,8 @@ public class FirstActivity extends AppCompatActivity {
                 intent.putExtra("extra_data",data);
                 startActivityForResult(intent,1);
 
-                Intent intent1 = new Intent(FirstActivity.this,FirstActivity.class);
-                startActivity(intent1);
+            //    Intent intent1 = new Intent(FirstActivity.this,FirstActivity.class);
+            //    startActivity(intent1);
             }
         });
     }
