@@ -28,7 +28,7 @@ public class FirstActivity extends AppCompatActivity {
              //   Intent intent = new Intent("com.maidi.activitytest.ACTION_START");
              //   intent.addCategory("com.maidi.activitytest.MYCATEGORY");
                 intent.putExtra("extra_data",data);
-                startActivityForResult(intent,1);
+                //startActivityForResult(intent,1);
 
                 Intent intent1 = new Intent(FirstActivity.this,FirstActivity.class);
                 startActivity(intent1);
