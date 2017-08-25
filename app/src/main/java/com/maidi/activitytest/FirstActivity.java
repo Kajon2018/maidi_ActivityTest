@@ -16,6 +16,7 @@ public class FirstActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.first_layout);
+        Log.d("FirstActivity",this.toString());
         Button button1=(Button)findViewById(R.id.button_1);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +29,9 @@ public class FirstActivity extends AppCompatActivity {
              //   intent.addCategory("com.maidi.activitytest.MYCATEGORY");
                 intent.putExtra("extra_data",data);
                 startActivityForResult(intent,1);
+
+                Intent intent1 = new Intent(FirstActivity.this,FirstActivity.class);
+                startActivity(intent1);
             }
         });
     }
